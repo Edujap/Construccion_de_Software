@@ -1,0 +1,32 @@
+<div layout=”row”>
+
+<div class="row">
+  <div flex class="col-md-10">
+    <h2>Registrar Reporte</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+      <div flex class="form-group col-md-8">
+        <label for="Id_Usuario">Nick</label>
+          <input autocomplete="off" formControlName="Id_Usuario" placeholder="Nick" name="Id_Usuario" class="form-control" id="Id_Usuario" required>
+¿
+      </div>
+      <div flex class="form-group col-md-8">
+        <label for="tipo">Tipo:</label>
+        <input autocomplete="off" formControlName="tipo" placeholder="Tipo" name="tipo" class="form-control" id="tipo" required>
+      </div>
+      <div flex class="form-group col-md-8">
+        <label for="Reporte">Descripcion</label>
+        <input autocomplete="off" formControlName="Reporte" placeholder="Escriba una breve descripcion del suceso" name="Reporte" class="form-control" id="Reporte" required>
+      </div>
+
+      <div flex class="form-group col-md-8">
+        <div flex class="">
+
+          <button  class="btn btn-success">Guardar</button> &nbsp;&nbsp;&nbsp;
+          <button class="btn btn-primary" (click)="Regresar()">Regresar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+  <div layout=”row”>
+

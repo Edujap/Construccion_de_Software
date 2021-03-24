@@ -1,0 +1,34 @@
+<div class="col">
+  <h2>Reportes</h2>
+  <button class="btn btn-primary" (click)="add_reporte()">Nuevo Cargo</button>&nbsp;&nbsp;&nbsp;
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>id_usuario.</th>
+      <th>Tipo</th>
+      <th>Descripcion</th>
+      <th class="visible">Creado</th>
+      <th class="visible">Modificado</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let reporte of listreporte ; ">
+      <td class="hidden">{{ reporte.id }}</td>
+      <td>{{reporte.Id_Usuario}}</td>
+      <td>{{reporte.tipo}}</td>
+      <td>{{reporte.Reporte }}</td>
+      <td class="visible">{{reporte.updated_at | date:'dd/MM/yyyy   HH:mm:ss' }}</td>
+      <td class="visible">{{reporte.created_at | date:'dd/MM/yyyy   HH:mm:ss'}}</td>
+      <td>
+        <button class="btn btn-success" (click)="editar_reporte(reporte)">
+          Editar
+        </button>
+        <button class="btn btn-danger" (click)="eliminar_Reporte(reporte.id)">
+          Borrar
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
